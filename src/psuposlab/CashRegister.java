@@ -21,7 +21,10 @@ public class CashRegister {
         new Product("W101", "Women's Blouse", 36.50, turkeyDiscount),
         new Product("M102", "Man's Slacks  ", 35.50, normalDiscount),
         new Product("W103", "Women's purse ", 28.75, christmasDiscount),
-        new Product("M104", "Man's Wallet  ", 9.25, noDiscount)};
+        new Product("M104", "Man's Wallet  ", 9.25, noDiscount),
+        new Product("K101", "Kids shirt    ", 12.50, normalDiscount),
+        new Product("K102", "Kids shoes    ", 18.00, normalDiscount)
+    };
     
     private Customer[] customers = {
         new Customer("C001", "Mary Smith", "2468 Cherry Tree Rd, Milwaukee, WI 53221"),
