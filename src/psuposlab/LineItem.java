@@ -4,7 +4,9 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 /**
- * Description: This class contains the objects and field for a sale item
+ * Description: This class contains the objects and field for a sale item. It
+ * holds a product object containing the ID, description, price and the discount
+ * strategy used for each product.
  *
  * @author Patrick Urban
  */
@@ -53,12 +55,19 @@ public class LineItem {
         return product;
     }
     
+    /**
+     * @return the total of the purchase
+     */
     public final double getTotalBeforeDiscount(){
         return quantity * product.getPrice();
     }
    
+    /**
+     * Passing the quantity to the product object method
+     * @return the discount amount
+     */
     public final double getDiscountAmount(){
-        return getProduct().getDiscountfromSale(this.getQuantity());
+        return this.getProduct().getDiscountfromSale(this.getQuantity());
     }
 
 }

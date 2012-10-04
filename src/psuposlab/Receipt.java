@@ -3,7 +3,8 @@ package psuposlab;
 import java.text.NumberFormat;
 
 /**
- * A receipt for all items that have been purchased.
+ * A receipt for all items that have been purchased. Each item purchased is stored
+ * in a lineItem array and lineItem objects.
  * @author Patrick Urban
  */
 public class Receipt {
@@ -43,15 +44,15 @@ public class Receipt {
         NumberFormat nf = NumberFormat.getCurrencyInstance();
         System.out.println(this.customer.getName() + "\n" + this.customer.getAddress());
         System.out.println("----------------------------------------------------------------------\n");
-        System.out.println("ID    Description     Qty  Price      Total $   Discount  Discount $");
+        System.out.println("ID    Description     Qty  Price      Total $   Discount   Discount $");
         for (LineItem line : lineItems){
             System.out.println(line.getLineItemDetails());
             grandTotal += line.getTotalBeforeDiscount();
             netDiscountTotal += line.getDiscountAmount();
         }
-        System.out.println("\nGrand Total of Purchase: " + nf.format(grandTotal));
-        System.out.println("Total of Discount:        " + nf.format(netDiscountTotal));
-        System.out.println("Amount Due:              " + nf.format(grandTotal-netDiscountTotal));
+        System.out.println("\nGrand Total of Purchase:  " + nf.format(grandTotal));
+        System.out.println("Total of Discount:         " + nf.format(netDiscountTotal));
+        System.out.println("Amount Due:               " + nf.format(grandTotal-netDiscountTotal));
             
     }
 }

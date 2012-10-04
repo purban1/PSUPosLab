@@ -23,6 +23,7 @@ public class Customer {
     }
 
     public final void setId(String id) {
+        // Add verifier to make sure the String is not Null or blank
         this.id = id;
     }
 
@@ -31,6 +32,7 @@ public class Customer {
     }
 
     public final void setName(String name) {
+        // Add verifier to make sure the String is not Null or blank
         this.name = name;
     }
 
@@ -39,6 +41,7 @@ public class Customer {
     }
 
     public final void setAddress(String address) {
+        // Add verifier to make sure the String is not Null or blank
         this.addresss = address;
     }
 }

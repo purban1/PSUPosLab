@@ -1,7 +1,7 @@
 package psuposlab;
 
 /**
- * This discount returns no discount
+ * This discount returns a normal sale discount
  * @author Patrick Urban
  */
 public class EnjoySomeSavingsDiscountStrategy implements DiscountStrategy{

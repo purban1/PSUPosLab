@@ -1,7 +1,7 @@
 package psuposlab;
 
 /**
- * This discount returns no discount
+ * This discount returns the after Thanksgiving sale discount
  * @author Patrick Urban
  */
 public class DayAfterThanksgivingDiscountStrategy implements DiscountStrategy{

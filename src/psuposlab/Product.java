@@ -2,7 +2,7 @@ package psuposlab;
 
 /**
  * This class holds the ID, Description, price and applicable Discount for each
- * product
+ * product.
  *
  * @author Patrick Urban
  */
@@ -32,6 +32,7 @@ public class Product {
     }
 
     public final void setDiscountStrategy(DiscountStrategy discount) {
+        // Add verifier to make sure discount is a DiscountStrategy
         this.discount = discount;
     }
 
@@ -40,6 +41,7 @@ public class Product {
     }
 
     public final void setId(String id) {
+        // Add verifier to make sure the String is not Null or blank
         this.id = id;
     }
 
@@ -48,6 +50,7 @@ public class Product {
     }
 
     public final void setDescription(String description) {
+        // Add verifier to make sure the String is not Null or blank
         this.description = description;
     }
 

@@ -1,7 +1,10 @@
 package psuposlab;
 
 /**
- *
+ * CashRegister contains the "database" for the products for sale and the
+ * customers that the store knows about. It has three jobs: Pass the sale to
+ * the receipt, pass the customer shopping to the receipt and tell the receipt 
+ * to print.
  * @author Patrick Urban
  */
 public class CashRegister {
@@ -29,7 +32,7 @@ public class CashRegister {
     // When adding an item to a sale you need to look up the item in the database
     // Here we use the prodId to find product in the above array
     public void addItemToSale(String prodId, int qty) {
-        // Validate that the String is not null
+        // Validate that the String is not null and qty not 0 or less
         Product product = null;
         for (Product p : products) {
             if (prodId.equals(p.getId())) {
