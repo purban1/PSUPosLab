@@ -15,6 +15,8 @@ public class CashRegister {
             new DayAfterChristmasDiscountStrategy();
     private DiscountStrategy turkeyDiscount =
             new DayAfterThanksgivingDiscountStrategy();
+    private DiscountStrategy quantityDiscount =
+            new VolumeDiscountStrategy();
     private Receipt receipt = new Receipt();
     
     private Product[] products = {
@@ -22,7 +24,7 @@ public class CashRegister {
         new Product("M102", "Man's Slacks  ", 35.50, normalDiscount),
         new Product("W103", "Women's purse ", 28.75, christmasDiscount),
         new Product("M104", "Man's Wallet  ", 9.25, noDiscount),
-        new Product("K101", "Kids shirt    ", 12.50, normalDiscount),
+        new Product("K101", "Kids shirt    ", 12.50, quantityDiscount),
         new Product("K102", "Kids shoes    ", 18.00, normalDiscount)
     };
     

@@ -16,10 +16,10 @@ public class Startup {
         cr.addItemToSale("M102", 4);
         cr.addItemToSale("W101", 3);
         cr.addItemToSale("M104", 2);
-        cr.addItemToSale("K101", 5);
+        cr.addItemToSale("K101", 6);
         
 //        cr.setupTheCustomer("C003");
-        cr.setupTheCustomer("C002");
+        cr.setupTheCustomer("C003");
                             
         cr.printTheReceipt();
     }
