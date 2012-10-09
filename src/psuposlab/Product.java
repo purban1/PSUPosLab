@@ -12,7 +12,7 @@ public class Product {
     private String description;
     private double price;
     private DiscountStrategy discount;
-
+    
     public Product(String id, String description, double price,
             DiscountStrategy discount) {
         this.id = id;
@@ -20,6 +20,7 @@ public class Product {
         this.price = price;
         this.discount = discount;
     }
+
     
     // Retrieves the amount of the Discount to a LineItem call
     public final double getDiscountfromSale(int qty){

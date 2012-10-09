@@ -15,12 +15,31 @@ public class LineItem {
     private int quantity;
     private Product product;
 
-    public LineItem(Product product, int qty) {
+    // Will find the product in the 'database'
+    ProductCustomerDatabase productDatabase = new ProductCustomerDatabase(); 
+
+    // Method will set the quantity and lookup the correct product in the
+    // 'database' productDatabase
+    public LineItem(String prodID, int qty) {
         // verify the type and that qty is not 0 or less
         this.quantity = qty;
-        this.product = product;
+        this.product = locateTheProduct(prodID);
     }
 
+        
+    // Finds the product in the 'database'
+    public final Product locateTheProduct(String prodID) {
+        // Validate that the String is not null
+        Product product = null;
+        product = productDatabase.findTheProductInTheDatabse(prodID);
+
+        // if found, add the lineItem to the receipt
+        if (product != null) {
+            this.product = product;
+        }
+        return product;
+    }
+    
     // Summarize the contents of the LineItem object
     public final String getLineItemDetails() {
         NumberFormat nf = NumberFormat.getCurrencyInstance();

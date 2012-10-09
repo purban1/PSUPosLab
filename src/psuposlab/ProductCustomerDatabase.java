@@ -1,7 +1,7 @@
 package psuposlab;
 
 /**
- *
+ * "database" that stores customer and product information 
  * @author Patrick Urban
  */
 public class ProductCustomerDatabase {

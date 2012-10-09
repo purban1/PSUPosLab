@@ -11,10 +11,15 @@ public class Startup {
      */
     public static void main(String[] args) {
         
+        // output strategy for the receipt
+//        ReceiptOutputStrategy getCusReceipt = new ReceiptOutputToConsole();
+        ReceiptOutputStrategy getCusReceipt = new ReceiptOutputToScreen();
+        
+        
         CashRegister cr = new CashRegister();
 
 //        cr.setupTheCustomer("C003");
-        cr.customerNewSale("C003");
+        cr.customerNewSale("C001");
         
         cr.addItemToSale("M102", 4);
         cr.addItemToSale("W101", 3);
@@ -22,6 +27,6 @@ public class Startup {
         cr.addItemToSale("K101", 6);
         
                             
-        cr.displayTheReceipt();
+        cr.displayTheReceipt(getCusReceipt);
     }
 }
