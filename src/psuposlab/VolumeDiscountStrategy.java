@@ -7,12 +7,23 @@ package psuposlab;
  */
 public class VolumeDiscountStrategy implements DiscountStrategy {
 
-    private final Double DISCOUNT = 0.15;
+    private Double discount;
+
+    // Constructor
+    public VolumeDiscountStrategy(Double discountPercentage) {
+        // Needs Validation
+        this.discount = discountPercentage;
+    }
+
+    public final void setDiscount(Double discountPercentage) {
+        // Needs Validation
+        this.discount = discountPercentage;
+    }
 
     @Override
-    public Double getDiscount(Double price, int qty) {
+    public final Double getDiscount(Double price, int qty) {
         if (qty >= 5) {
-            return price * qty * DISCOUNT;
+            return price * qty * this.discount;
         } else {
             return 0.0;
         }

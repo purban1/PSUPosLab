@@ -12,15 +12,16 @@ public class Startup {
     public static void main(String[] args) {
         
         CashRegister cr = new CashRegister();
+
+//        cr.setupTheCustomer("C003");
+        cr.customerNewSale("C003");
         
         cr.addItemToSale("M102", 4);
         cr.addItemToSale("W101", 3);
         cr.addItemToSale("M104", 2);
         cr.addItemToSale("K101", 6);
         
-//        cr.setupTheCustomer("C003");
-        cr.setupTheCustomer("C003");
                             
-        cr.printTheReceipt();
+        cr.displayTheReceipt();
     }
 }

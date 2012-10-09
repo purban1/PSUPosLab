@@ -6,4 +6,5 @@ package psuposlab;
  */
 public interface DiscountStrategy {
     public abstract Double getDiscount(Double price, int qty);
+    public abstract void setDiscount(Double discountPercentage);
 }
